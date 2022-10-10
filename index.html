@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Bazinga!| Rock, Paper, Scissors, Lizard, Spock</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,600,700&amp;lang=en"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./styles_rock_papaer.css" />
+  </head>
+
+  <body>
+    <h1 aria-hidden="true">Game | Rock, Paper, Scissors, Lizard, Spock</h1>
+    <div class="header">
+      <div class="logo">
+        <img
+          src="./images/logo-bonus.svg"
+          alt="Rock,Paper,Scissors,Lizard,Spock"
+        />
+      </div>
+
+      <div class="score" role="region">
+        <span>Score</span>
+        <span id="score">0</span>
+      </div>
+    </div>
+  
+      <div class="main">
+        <section id="startPage">
+          <h2 aria-hidden="true">Home Page | Start Game</h2>
+          <div data-choice="rock" class="icon rock" role="button" tabindex="5" aria-label="rock"></div>
+          <div data-choice="paper" class="icon paper" role="button" tabindex="3" aria-label="paper"></div>
+          <div data-choice="scissors" class="icon scissors" role="button" tabindex="1" aria-label="scissors"></div>
+          <div data-choice="lizard" class="icon lizard" role="button" tabindex="4" aria-label="lizard"></div>
+          <div data-choice="spock" class="icon spock" role="button" tabindex="2" aria-label="spock"></div>  
+        </section>
+       
+      
+
+      <section id="resultPage">
+        <h2 aria-hidden="true">Result Page</h2>
+        <div id="userIcon" class="icon"></div>
+        <div id="houseIcon" class="icon"></div>
+        <div id="youPicked" class="picked">You picked</div>
+        <div id="housePicked" class="picked">Sheldon Cooper Picked</div>
+
+        <div id="whoWin"></div>
+        <button id="playAgain">Play again</button>
+      </section>
+
+    </div>
+    <!-- .main -->
+    <footer>
+      <aside>
+        <button id="openModal">Rules/Reglas</button>
+      </aside>
+    </footer> 
+    
+
+    <footer class="attribution">
+      Challenge by:
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      ><br>Adaptation by:
+      <a>Eduardo Ferrán</a>
+    </footer>
+
+    
+    <!-- /#modal -->
+
+    <audio data-sound="user-choice">
+      <source src="./sounds/sounds_userChoice.mp3" type="audio/mpeg" />
+      <source src="./sounds/sounds_userChoice.wav" type="audio/wav" />
+    </audio>
+
+    <audio data-sound="you-win">
+      <source src="./sounds/sounds_youWin.mp3" type="audio/mpeg" />
+      <source src="./sounds/sounds_youWin.wav" type="audio/wav" />
+    </audio>
+
+    <audio data-sound="you-lose">
+      <source src="./sounds/sounds_youLose.mp3" type="audio/mpeg" />
+      <source src="./sounds/sounds_youLose.wav" type="audio/wav" />
+    </audio>
+
+    <audio data-sound="draw">
+      <source src="./sounds/sounds_draw.mp3" type="audio/mpeg" />
+      <source src="./sounds/sounds_draw.wav" type="audio/wav" />
+    </audio>
+    <div id="modal" aria-hidden="true" role="dialog">
+      <div id="modalContent">
+        <button id="closeModal">&times;</button>
+        <p><img src="images/image-rules-bonus.svg" alt="Game Rules" /></p>
+      </div>
+    </div>
+
+    <script src="./JS/rock_paper.js"></script>
+  </body>
+</html>
+
